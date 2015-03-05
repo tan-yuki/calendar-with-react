@@ -18,6 +18,6 @@ export default React.createClass({
       dates.push(<Day key={id} date={m} />);
     });
 
-    return <tr>{dates}</tr>;
+    return <tr className="week">{dates}</tr>;
   }
 })

@@ -7,7 +7,7 @@ const App = React.createClass({
   },
 
   render() {
-    return <div id="app">
+    return <div className="app">
       <Calendar />
     </div>;
   }

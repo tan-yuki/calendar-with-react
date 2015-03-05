@@ -19,6 +19,19 @@ export default React.createClass({
       weeks.push(<Week key={id} startDay={startDay} />);
     });
 
-    return <table id="calendar"><tbody>{weeks}</tbody></table>;
+    return <table className="calendar">
+      <thead className="calendar-headline">
+        <tr>
+　　  　  <th className="calendar-cell">Mon</th>
+　　  　  <th className="calendar-cell">Thu</th>
+　　  　  <th className="calendar-cell">Wed</th>
+　　  　  <th className="calendar-cell">Thu</th>
+　　  　  <th className="calendar-cell">Fri</th>
+　　  　  <th className="calendar-cell">Sat</th>
+　　  　  <th className="calendar-cell">Sun</th>
+　　    </tr>
+      </thead>
+      <tbody>{weeks}</tbody>
+    </table>;
   }
 })

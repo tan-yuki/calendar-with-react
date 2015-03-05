@@ -10,6 +10,6 @@ export default React.createClass({
     let moment = this.props.date;
     let dateString = moment.format('YYYY/MM/DD');
 
-    return <td>{dateString}</td>;
+    return <td className="day calendar-cell">{dateString}</td>;
   }
 })

@@ -18,6 +18,7 @@ $ =
   main: './app/main.js'
   html: './index.html'
   js:   './app/**/*.js'
+  css:  './styles/**/*.css'
   output:
     js:   './dist'
     main: './dist/main.js'
@@ -55,7 +56,7 @@ gulp.task 'watch', ->
       baseDir: './'
   o = debounceDelay: 3000
 
-  gulp.watch [$.js], o, [
+  gulp.watch [$.js, $.css], o, [
     'clean'
     'browserify'
   ]

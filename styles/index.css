@@ -1,0 +1,26 @@
+table.calendar {
+    width: 80%;
+    height: 50%;
+    border-collapse:collapse;
+    border:0px;
+    min-width: 1000px;
+    min-height: 400px;
+}
+
+thead.calendar-headline {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgb(157, 218, 193);
+}
+
+.calendar-cell {
+    border: 1px #ccc solid;
+}
+
+td.day {
+    width: 14%;
+    height: 20%;
+    text-align: left;
+    vertical-align: text-top;
+    font-size: 10px;
+}
