@@ -11,9 +11,8 @@ export default React.createClass({
   },
 
   findDayEvent(date) {
-    let dateString = date.format('YYYYMMDD');
     return _.filter(this.state.events, (e) => {
-      return e.date.format('YYYYMMDD') === dateString;
+      return e.date.isSame(date, "day");
     });
   },
 
