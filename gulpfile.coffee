@@ -55,12 +55,10 @@ gulp.task 'watch', ->
     server:
       baseDir: './'
   o = debounceDelay: 3000
-
   gulp.watch [$.js, $.css], o, [
     'clean'
     'browserify'
   ]
-
   gulp.watch [$.output.main, $.html], o, reload
 
 gulp.task 'server', [

@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import moment from 'moment-range';
-import Day from './day.js';
-import _ from 'underscore';
+import Day    from './day.js';
+import _      from 'underscore';
 
 export default React.createClass({
   getInitialState() {
@@ -11,8 +11,8 @@ export default React.createClass({
   },
 
   findDayEvent(date) {
-    return _.filter(this.state.events, (e) => {
-      return e.date.isSame(date, "day");
+    return _.filter(this.props.events, (e) => {
+      return e.startDate.isSame(date, "day");
     });
   },
 

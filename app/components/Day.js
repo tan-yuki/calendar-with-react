@@ -1,5 +1,6 @@
-import React from 'react';
+import React  from 'react';
 import moment from 'moment';
+import EventActions from '../actions/EventActions.js'
 
 export default React.createClass({
   getInitialState() {
@@ -9,7 +10,9 @@ export default React.createClass({
   },
 
   createEventView() {
-    let events = this.state.events;
+    let events = this.props.events;
+    events.length && console.log(events);
+
     if (!events) {
       return '';
     }
@@ -22,11 +25,17 @@ export default React.createClass({
     return <ul className="event">{eventsListView}</ul>
   },
 
+  onClick(e) {
+    let name = 'This is for test';
+    let moment = this.props.date;
+
+    EventActions.create(name, moment);
+  },
+
   render() {
     let moment = this.props.date;
     let dateString = moment.format('YYYY/MM/DD');
-    let eventsView = this.createEventView();
 
-    return <td className="day calendar-cell">{dateString}{this.createEventView()}</td>;
+    return <td onClick={this.onClick} className="day calendar-cell">{dateString}{this.createEventView()}</td>;
   }
 })
